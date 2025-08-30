@@ -4,68 +4,77 @@
 
 ---
 
-## 📋 **Project Overview**  
+📄 AI Resume Analyzer
 
-The **AI-Powered Resume Analyzer** serves as a virtual HR assistant, providing:  
-- Detailed resume evaluation, including strengths and weaknesses.  
-- Suggestions for skill improvement and recommended courses.  
-- Job-specific resume analysis to measure compatibility and alignment with job descriptions.  
+An AI-powered web application built with Streamlit that analyzes resumes and matches them against a given job description. The tool extracts text from PDF resumes, processes it using NLP techniques, and provides a similarity score to rank candidates.
 
-Whether you’re a job seeker or a recruiter, this tool simplifies resume assessment and improvement.  
+🚀 Features
 
----
+Upload multiple resumes in PDF format
 
-## 🔑 **Features**  
+Enter a job description
 
-### 1️⃣ **General Resume Analysis**  
-- Summarizes the resume in one line.  
-- Highlights existing skill sets.  
-- Identifies skill gaps and suggests improvements.  
-- Recommends popular courses to enhance the resume.  
-- Provides a thorough evaluation of strengths and weaknesses.  
+Extracts and processes text using NLP
 
-### 2️⃣ **Resume Matching with Job Description**  
-- Analyzes resume compatibility with a specific job description.  
-- Provides a match score in percentage.  
-- Highlights missing skills and areas needing improvement.  
-- Suggests whether the resume is ready for the job or requires further enhancements.  
+Generates a similarity score between resume & job description
 
----
+Displays ranked results
 
-## 🛠️ **Tech Stack**  
+🛠️ Tech Stack
 
-| **Component**       | **Technology**                  |  
-|----------------------|----------------------------------|  
-| **Frontend**         | [Streamlit](https://streamlit.io/) |  
-| **Backend**          | Python                          |  
-| **AI Model**         | [Google Generative AI (Gemini)](https://developers.generativeai.google/) |  
-| **PDF Parsing**      | `pdfplumber`                    |  
-| **OCR Fallback**     | `pytesseract`                   |  
-| **Environment Config** | `.env` for API key security    |  
+Python 3
 
----
+Streamlit – Web framework
 
-## 📊 **How It Works**
+pdfplumber – Extract text from PDFs
 
-1. **Resume Parsing**  
-   - Extracts text from PDF files using `pdfplumber` or OCR as a fallback.
+scikit-learn – TF-IDF Vectorizer & Cosine Similarity
 
-2. **AI Analysis**  
-   - Utilizes Google Generative AI to summarize and analyze resume content.  
-   - Matches skills with job descriptions for compatibility scoring.
+NLTK – Natural Language Processing
 
-3. **Insightful Feedback**  
-   - Provides actionable suggestions for skill enhancement, including course recommendations.  
-   - Highlights strengths and weaknesses to refine resumes for better opportunities.
+Pandas & NumPy – Data handling
 
----
+📂 Project Structure
+ai-resume-analyzer/
+│── app.py                # Main Streamlit app
+│── requirements.txt      # Required dependencies
+│── README.md             # Project documentation
+│── sample_resumes/       # (Optional) Store test resumes
 
-![image](https://github.com/user-attachments/assets/418e54ef-82d0-474b-a6bc-9a30d72f27f5)
+⚙️ Installation
 
-## 🙌 **Contributing**
+Clone this repository:
 
-Welcome contributions to make this tool better!
+git clone https://github.com/your-username/ai-resume-analyzer.git
+cd ai-resume-analyzer
 
-1. **Fork** the repository.  
-2. **Create a new branch** for your feature or bug fix.  
-3. **Submit a pull request** with detailed information about your changes.
+
+Install dependencies:
+
+pip install -r requirements.txt
+
+
+Run the app:
+
+streamlit run app.py
+
+📊 Example Output
+
+Upload resumes and paste a job description.
+
+The app will calculate similarity scores.
+
+Example result:
+
+Resume_1.pdf → 82% match
+Resume_2.pdf → 65% match
+Resume_3.pdf → 40% match
+
+🤝 Contributing
+
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+📜 License
+
+This project is licensed under the MIT License.
+
